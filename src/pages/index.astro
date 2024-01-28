@@ -1,12 +1,14 @@
 ---
+import Button from "../components/Button.astro";
 import Projects from "../components/Projects.astro";
+import AboutMe from "../components/AboutMe.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Juan José Boydo | Desarrollador y Programador Web">
 	<main class="px-4">
-		<SectionContainer class="py-24 xl:py-60">
+		<SectionContainer class="py-24 xl:py-[185px]">
 			<h1
 				class="text-5xl md:text-6xl lg:text-8xl font-black gap-x-4 pb-5 bg-gradient-to-r from-sky-300 to-cyan-600 inline-block text-transparent bg-clip-text"
 			>
@@ -21,14 +23,41 @@ import Layout from "../layouts/Layout.astro";
 				>. Me especializo en crear aplicaciones web interactivas con
 				React Js.
 			</h3>
+			<a href="#projects">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="icon icon-tabler icon-tabler-square-arrow-down absolute bottom-10 left-1/2"
+					width="44"
+					height="44"
+					viewBox="0 0 24 24"
+					stroke-width="1.5"
+					stroke="#26C6DA"
+					fill="none"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				>
+					<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+					<path d="M8 12l4 4l4 -4"></path>
+					<path d="M12 8v8"></path>
+					<path
+						d="M3 3m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"
+					></path>
+				</svg>
+			</a>
+			<Button />
 			<ul></ul>
 		</SectionContainer>
 
 		<div class="m-12 h-16"></div>
 
-		<SectionContainer id="projects">
+		<SectionContainer id="projects" class="pt-28">
 			<h2 class="text-5xl font-bold mb-14">Proyectos destacados</h2>
 			<Projects />
+		</SectionContainer>
+
+		<SectionContainer id="about" class="pt-28">
+			<h2 class="text-5xl font-bold mb-14">Sobre mí</h2>
+			<AboutMe />
 		</SectionContainer>
 	</main>
 </Layout>

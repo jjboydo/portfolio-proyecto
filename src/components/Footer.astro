@@ -1,1 +1,52 @@
-<footer class="py-20">FOOOOOTER</footer>
+---
+const currentYear = new Date().getFullYear();
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import MailIcon from "../components/icons/Mail.astro";
+---
+
+<footer
+    class="rounded-lg shadow m-4 bg-black/5 dark:bg-black/20 backdrop-blur-lg w-full xl:w-[1120px] mx-auto my-10"
+>
+    <div
+        class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between"
+    >
+        <span
+            class="text-sm sm:text-center text-cyan-600/90 dark:text-cyan-200/90 font-bold"
+            >© {currentYear}
+            <a href="https://midu.dev/" class="hover:underline"
+                >Juan José Boydo</a
+            >. Todos los derechos reservados
+        </span>
+        <ul class="flex gap-x-10">
+            <li
+                class="hover:scale-125 hover:bg-cyan-300/50 transition rounded-sm"
+            >
+                <a
+                    href="https://www.linkedin.com/in/jjboydo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><LinkedInIcon class="w-6 h-6" /></a
+                >
+            </li>
+            <li
+                class="hover:scale-125 hover:bg-cyan-300/50 transition rounded-full"
+            >
+                <a
+                    href="https://github.com/jjboydo"
+                    target="_blank"
+                    rel="noopener noreferrer"><GitHubIcon class="w-6 h-6" /></a
+                >
+            </li>
+            <li
+                class="hover:scale-125 hover:bg-cyan-300/50 transition rounded-sm"
+            >
+                <a
+                    href="https://mailto:juanjoo1020@gmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"><MailIcon class="w-6 h-6" /></a
+                >
+            </li>
+        </ul>
+    </div>
+</footer>
